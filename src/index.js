@@ -7,10 +7,11 @@ import * as serviceWorker from "./serviceWorker";
 ReactDOM.render(
   <Lib
     useImageHosting={{
-      url: "https://imgkr.com/api/files/upload",
-      name: "图壳",
-      isSmmsOpen: true,
-      isQiniuyunOpen: true,
+      // url: "https://imgkr.com/api/files/upload",
+      // name: "图壳",
+      type: "阿里云",
+      isSmmsOpen: false,
+      isQiniuyunOpen: false,
       isAliyunOpen: true,
     }}
     defaultTitle="微信Markdown编辑器"
