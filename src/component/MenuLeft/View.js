@@ -10,11 +10,11 @@ import "./common.css";
 
 const menu = (
   <Menu>
-    <Menu.Item>
+    {/* <Menu.Item>
       <FullScreen />
-    </Menu.Item>
+    </Menu.Item> */}
 
-    <Menu.Divider />
+    {/* <Menu.Divider /> */}
 
     <Menu.Item>
       <EditArea />

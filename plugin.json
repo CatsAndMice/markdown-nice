@@ -1,0 +1,21 @@
+{
+  "main": "/docs/index.html",
+  "logo": "logo.png",
+  "features": [
+    {
+      "code": "passwords",
+      "explain": "安全、简洁的密码管家",
+      "cmds": [
+        "Passwords",
+        "密码管理"
+      ]
+    },
+    {
+      "code": "random",
+      "explain": "随机密码生成器",
+      "cmds": [
+        "随机密码"
+      ]
+    }
+  ]
+}

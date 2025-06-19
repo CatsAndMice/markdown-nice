@@ -64,7 +64,12 @@ class Theme extends React.Component {
       </Menu>
     );
     return (
-      <Dropdown overlay={mdMenu} trigger={["click"]} overlayClassName="nice-overlay">
+      <Dropdown
+        overlay={mdMenu}
+        trigger={["click"]}
+        overlayStyle={{maxHeight: 500, overflowY: "auto"}}
+        overlayClassName="nice-overlay"
+      >
         <a id="nice-menu-theme" className="nice-menu-link" href="#">
           主题
         </a>

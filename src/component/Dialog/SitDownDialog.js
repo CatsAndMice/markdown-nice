@@ -75,7 +75,7 @@ class SitDownDialog extends Component {
     const {sourceCode, platform} = this.state;
     return (
       <Modal
-        title="SitDown：html 转 markdown 神器"
+        title="html 转 markdown 神器"
         okText="转换"
         cancelText="取消"
         visible={this.props.dialog.isSitDownOpen}

@@ -32,7 +32,7 @@ class Navbar extends Component {
               {title}
             </section>
           )}
-          <File />
+          {/* <File /> */}
           <Pattern />
           <Function />
           <View />

@@ -13,7 +13,7 @@ ReactDOM.render(
       isQiniuyunOpen: true,
       isAliyunOpen: true,
     }}
-    defaultTitle="Markdown Nice"
+    defaultTitle="微信Markdown编辑器"
   />,
   document.getElementById("root"),
 );
