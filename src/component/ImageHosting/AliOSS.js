@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {observer, inject} from "mobx-react";
 import {Input, Form} from "antd";
 import {ALIOSS_IMAGE_HOSTING} from "../../utils/constant";
+import {setDbItem, getDbItem} from "../../utils/dbStorage";
 
 const formItemLayout = {
   labelCol: {
@@ -18,7 +19,7 @@ class AliOSS extends Component {
   constructor(props) {
     super(props);
     // 从localstorage里面读取
-    const imageHosting = JSON.parse(localStorage.getItem(ALIOSS_IMAGE_HOSTING));
+    const imageHosting = JSON.parse(getDbItem(ALIOSS_IMAGE_HOSTING));
     this.state = {
       imageHosting,
     };
@@ -28,28 +29,28 @@ class AliOSS extends Component {
     const {imageHosting} = this.state;
     imageHosting.region = e.target.value;
     this.setState({imageHosting});
-    localStorage.setItem(ALIOSS_IMAGE_HOSTING, JSON.stringify(imageHosting));
+    setDbItem(ALIOSS_IMAGE_HOSTING, JSON.stringify(imageHosting));
   };
 
   accessKeyIdChange = (e) => {
     const {imageHosting} = this.state;
     imageHosting.accessKeyId = e.target.value;
     this.setState({imageHosting});
-    localStorage.setItem(ALIOSS_IMAGE_HOSTING, JSON.stringify(imageHosting));
+    setDbItem(ALIOSS_IMAGE_HOSTING, JSON.stringify(imageHosting));
   };
 
   accessKeySecretChange = (e) => {
     const {imageHosting} = this.state;
     imageHosting.accessKeySecret = e.target.value;
     this.setState({imageHosting});
-    localStorage.setItem(ALIOSS_IMAGE_HOSTING, JSON.stringify(imageHosting));
+    setDbItem(ALIOSS_IMAGE_HOSTING, JSON.stringify(imageHosting));
   };
 
   bucketChange = (e) => {
     const {imageHosting} = this.state;
     imageHosting.bucket = e.target.value;
     this.setState({imageHosting});
-    localStorage.setItem(ALIOSS_IMAGE_HOSTING, JSON.stringify(imageHosting));
+    setDbItem(ALIOSS_IMAGE_HOSTING, JSON.stringify(imageHosting));
   };
 
   render() {
