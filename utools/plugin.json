@@ -1,12 +1,12 @@
 {
-  "main": "/docs/index.html",
   "logo": "logo.png",
+  "preload": "preload.js",
   "features": [
     {
       "code": "markdown",
       "explain": "微信markdown编辑器",
       "cmds": [
-        "markdown编辑器"
+        "markdown"
       ]
     }
   ]
