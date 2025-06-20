@@ -14,7 +14,7 @@ ReactDOM.render(
       isQiniuyunOpen: false,
       isAliyunOpen: true,
     }}
-    defaultTitle="微信Markdown编辑器"
+    defaultTitle="公众号排版编辑器"
   />,
   document.getElementById("root"),
 );
