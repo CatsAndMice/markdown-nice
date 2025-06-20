@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {Menu, Dropdown} from "antd";
 
 import ExportMarkdown from "./File/ExportMarkdown";
-import ExportPdf from "./File/ExportPdf";
+// import ExportPdf from "./File/ExportPdf";
 import ImportFile from "./File/ImportFile";
 import "./common.css";
 
@@ -11,9 +11,9 @@ const menu = (
     <Menu.Item>
       <ExportMarkdown />
     </Menu.Item>
-    <Menu.Item>
+    {/* <Menu.Item>
       <ExportPdf />
-    </Menu.Item>
+    </Menu.Item> */}
     <Menu.Item>
       <ImportFile />
     </Menu.Item>
