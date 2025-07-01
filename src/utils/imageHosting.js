@@ -6,7 +6,6 @@ import {message} from "antd";
 import axios from "axios";
 import OSS from "ali-oss";
 import imageHosting from "../store/imageHosting";
-
 import {
   SM_MS_PROXY,
   ALIOSS_IMAGE_HOSTING,
@@ -16,6 +15,7 @@ import {
   IMAGE_HOSTING_NAMES,
 } from "./constant";
 import {toBlob, getOSSName, axiosMdnice} from "./helper";
+import {getDbItem} from "./dbStorage";
 
 function showUploadNoti() {
   message.loading("图片上传中", 0);
@@ -295,7 +295,7 @@ export const aliOSSUpload = ({
   content = null, // store content
 }) => {
   showUploadNoti();
-  const config = JSON.parse(window.localStorage.getItem(ALIOSS_IMAGE_HOSTING));
+  const config = JSON.parse(getDbItem(ALIOSS_IMAGE_HOSTING));
   const base64Reader = new FileReader();
   base64Reader.readAsDataURL(file);
   base64Reader.onload = (e) => {
@@ -342,7 +342,7 @@ export const uploadAdaptor = (...args) => {
     }
     return qiniuOSSUpload(...args);
   } else if (type === IMAGE_HOSTING_NAMES.aliyun) {
-    const config = JSON.parse(window.localStorage.getItem(ALIOSS_IMAGE_HOSTING));
+    const config = JSON.parse(getDbItem(ALIOSS_IMAGE_HOSTING));
     if (
       !config.region.length ||
       !config.accessKeyId.length ||

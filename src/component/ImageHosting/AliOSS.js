@@ -19,6 +19,8 @@ class AliOSS extends Component {
   constructor(props) {
     super(props);
     // 从localstorage里面读取
+    console.log(getDbItem(ALIOSS_IMAGE_HOSTING));
+
     const imageHosting = JSON.parse(getDbItem(ALIOSS_IMAGE_HOSTING));
     this.state = {
       imageHosting,
@@ -75,7 +77,11 @@ class AliOSS extends Component {
         </Form.Item>
         <Form.Item label="提示" style={style.formItem}>
           <span>配置后请在右上角进行切换，</span>
-          <a rel="noopener noreferrer" target="_blank" href="https://docs.mdnice.com/#/aliyun-image-hosting">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://help.aliyun.com/zh/oss/getting-started/get-started-with-oss"
+          >
             阿里云图床配置文档
           </a>
         </Form.Item>
