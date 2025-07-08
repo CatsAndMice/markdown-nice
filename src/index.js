@@ -14,7 +14,7 @@ ReactDOM.render(
       isQiniuyunOpen: false,
       isAliyunOpen: true,
     }}
-    defaultTitle="公众号排版编辑器"
+    defaultTitle="微信公众号排版编辑器"
   />,
   document.getElementById("root"),
 );

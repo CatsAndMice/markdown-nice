@@ -77,7 +77,7 @@ export const juejinSuffix = () => {
   const suffix = document.createElement("p");
   suffix.id = "nice-suffix-juejin-container";
   suffix.className = "nice-suffix-juejin-container";
-  suffix.innerHTML = `本文使用 <a href="https://mdnice.com">mdnice</a> 排版`;
+  suffix.innerHTML = `本文使用 <a href="https://u.tools/plugins/detail/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E6%8E%92%E7%89%88%E7%BC%96%E8%BE%91%E5%99%A8/?c=eylamc1n2u">微信公众号排版编辑器</a> 排版`;
 
   const element = document.getElementById(LAYOUT_ID);
   element.appendChild(suffix);

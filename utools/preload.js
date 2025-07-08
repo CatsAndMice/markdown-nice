@@ -4,13 +4,11 @@ window.exports = {
     args: {
       // 插件执行入口
       enter: () => {
-        const win = utools.createBrowserWindow("../docs/index.html", {
+        const win = utools.createBrowserWindow("./dist/index.html", {
           width: 1000,
           height: 800,
           show: true,
-          title: "测试窗口"
-        }, () => {
-          win.webContents.openDevTools()
+          title: "编辑器"
         })
         utools.outPlugin();
       },

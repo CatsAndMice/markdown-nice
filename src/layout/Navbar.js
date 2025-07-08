@@ -10,7 +10,7 @@ import Theme from "../component/MenuLeft/Theme";
 import CodeTheme from "../component/MenuLeft/CodeTheme";
 import Setting from "../component/MenuLeft/Setting";
 import View from "../component/MenuLeft/View";
-
+import logo from "../assets/logo.png";
 import "./Navbar.css";
 
 // @inject("userInfo")
@@ -27,11 +27,9 @@ class Navbar extends Component {
     return (
       <div className={niceNavbarClass}>
         <div className="nice-left-nav">
-          {title === "" ? null : (
-            <section id="nice-title" className="nice-title">
-              {title}
-            </section>
-          )}
+          <div className="navbar-header" style={{margin: "0 5px"}}>
+            <img src={logo} alt="logo" style={{width: "30px", height: "30px"}} />
+          </div>
           <File />
           <Pattern />
           <Function />
